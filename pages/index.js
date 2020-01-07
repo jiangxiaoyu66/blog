@@ -1,7 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
-import { Button } from 'antd';
+import { Row,Col } from 'antd';
 import Header from "../components/Header";
+import Content from '../components/Content';
+import Slider from "../components/Slider";
 
 const Home = () => (
   <div>
@@ -12,6 +14,17 @@ const Home = () => (
       <link rel='icon' href='/favicon.ico' />
     </Head>
     <Header />
+
+    <Row type='flex' justify='center'>
+        <Col xs={24} md={16} lg={18} xl={14}>
+          <Content />
+        </Col>
+        <Col xs={0} md={0} lg={3} xl={4}  >
+          <Slider />
+        </Col>
+    </Row>
+
+
   </div>
 )
 
